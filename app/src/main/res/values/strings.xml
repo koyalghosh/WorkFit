@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">WorkFit</string>
+    <string name="e_mail">E-mail</string>
+    <string name="create_password">Create Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="sign_up">Sign-Up</string>
+</resources>
