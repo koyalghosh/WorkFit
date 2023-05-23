@@ -5,60 +5,41 @@ import android.os.Bundle
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import android.widget.EditText
 import android.widget.Spinner
+import android.widget.Switch
+import android.widget.TextView
 import android.widget.Toast
 
 class BmiCalc : AppCompatActivity() {
-    var dropDown: Spinner? = null
-    var dropDown2: Spinner?= null
+    var switch: Switch ?= null
+    var cm: TextView ?= null
+    var inch : TextView ?= null
+    var kg : TextView ?= null
+    var inchText : EditText ?= null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_bmi_calc)
 
-        val height = resources.getStringArray(R.array.height_unit)
-        val weight = resources.getStringArray(R.array.weight_unit)
-        dropDown = findViewById(R.id.dropdown)
-        dropDown2 = findViewById(R.id.dropdown2)
+        switch = findViewById(R.id.switchButton)
+        cm = findViewById(R.id.cm)
+        inch = findViewById(R.id.inch)
+        kg = findViewById(R.id.kg)
+        inchText = findViewById(R.id.numInch)
 
-        if (dropDown != null) {
-            val adapter = ArrayAdapter(
-                this,
-                android.R.layout.simple_spinner_item, height
-            )
-            dropDown?.adapter = adapter
-            dropDown?.onItemSelectedListener = object :
-                AdapterView.OnItemSelectedListener {
-                override fun onItemSelected(
-                    parent: AdapterView<*>,
-                    view: View, position: Int, id: Long
-                ) {
-                    Toast.makeText(this@BmiCalc, "Selected", Toast.LENGTH_SHORT).show()
-                }
-
-                override fun onNothingSelected(parent: AdapterView<*>?) {
-                    TODO("Not yet implemented")
-                }
+        switch?.setOnCheckedChangeListener { buttonView, isChecked ->
+            if(isChecked){
+                cm?.text = "feet"
+                inch?.setVisibility(View.VISIBLE)
+                kg?.text = "pounds"
+                inchText?.setVisibility(View.VISIBLE)
+            }else{
+                cm?.text = "cm"
+                inch?.setVisibility(View.INVISIBLE)
+                kg?.text = "kg"
+                inchText?.setVisibility(View.INVISIBLE)
             }
         }
-        if (dropDown2 != null) {
-            val adapter = ArrayAdapter(
-                this,
-                android.R.layout.simple_spinner_item, weight
-            )
-            dropDown2?.adapter = adapter
-            dropDown2?.onItemSelectedListener = object :
-                AdapterView.OnItemSelectedListener {
-                override fun onItemSelected(
-                    parent: AdapterView<*>,
-                    view: View, position: Int, id: Long
-                ) {
-                    Toast.makeText(this@BmiCalc, "Selected", Toast.LENGTH_SHORT).show()
-                }
 
-                override fun onNothingSelected(parent: AdapterView<*>?) {
-                    TODO("Not yet implemented")
-                }
-            }
-        }
     }
 }

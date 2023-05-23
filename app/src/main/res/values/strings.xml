@@ -4,12 +4,4 @@
     <string name="create_password">Create Password</string>
     <string name="confirm_password">Confirm Password</string>
     <string name="sign_up">Sign-Up</string>
-    <string-array name="height_unit" >
-        <item>cm</item>
-        <item>feets</item>
-    </string-array>
-    <string-array name="weight_unit">
-        <item>kg</item>
-        <item>pounds</item>
-    </string-array>
 </resources>
