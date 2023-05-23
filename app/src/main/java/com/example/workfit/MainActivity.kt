@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
 
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
 
-        tvSignIn = findViewById(R.id.signIn)
+        tvSignIn = findViewById(R.id.signUp)
         tvSignIn?.setOnClickListener{
             Toast.makeText(this,"Hello",Toast.LENGTH_LONG).show()
         }

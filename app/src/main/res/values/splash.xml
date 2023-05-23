@@ -2,7 +2,7 @@
 
 <resources>
     <style name="Theme.WorkFit.MySplash" parent="Theme.SplashScreen">
-        <item name="windowSplashScreenBackground">#E7E7E7</item>
+        <item name="windowSplashScreenBackground">#6EB2CC</item>
         <item name="windowSplashScreenAnimatedIcon">@drawable/logo</item>
         <item name="postSplashScreenTheme">@style/Theme.WorkFit</item>
     </style>
