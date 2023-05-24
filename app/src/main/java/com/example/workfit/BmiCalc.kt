@@ -53,9 +53,9 @@ class BmiCalc : AppCompatActivity() {
 
         switch?.setOnCheckedChangeListener { buttonView, isChecked ->
             if(isChecked){
-                cm?.text = "feet"
+                cm?.text = "ft"
                 inch?.setVisibility(View.VISIBLE)
-                kg?.text = "pounds"
+                kg?.text = "lbs"
                 etInch?.setVisibility(View.VISIBLE)
             }else{
                 cm?.text = "cm"
