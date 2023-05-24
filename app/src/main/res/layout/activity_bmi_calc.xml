@@ -5,23 +5,29 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".BmiCalc"
-    android:layout_margin="10sp"
+    android:layout_margin="5sp"
     android:gravity="center"
     android:orientation="vertical"
     android:background="#CAE9F5"
-    android:layout_marginTop="20sp"
     >
+
+    <ImageView
+        android:layout_width="127dp"
+        android:layout_height="34dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="10dp"
+        android:src="@drawable/logoandname" />
 
     <com.google.android.material.textview.MaterialTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="BMI Calculator"
-        android:fontFamily="monospace"
-        android:textSize="30sp"
-        android:textColor="@color/font_color"
+        android:layout_gravity="center_horizontal"
         android:layout_marginBottom="10sp"
-        android:textStyle="bold"
-        />
+        android:fontFamily="monospace"
+        android:text="BMI Calculator"
+        android:textColor="@color/heading_color"
+        android:textSize="30sp"
+        android:textStyle="bold" />
 
     <ImageView
         android:layout_width="wrap_content"
@@ -87,7 +93,7 @@
     </com.google.android.material.card.MaterialCardView>
 
     <com.google.android.material.card.MaterialCardView
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:backgroundTint="#D8F9FF"
         android:layout_marginTop="10sp"
@@ -141,8 +147,10 @@
                 android:id="@+id/numInch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:paddingEnd="10dp"
                 android:text="0"
-                android:layout_marginLeft="25sp"
+                android:backgroundTint="#D8F9FF"
+                android:layout_marginLeft="15sp"
                 android:inputType="number"
                 android:visibility="invisible"
                 android:textColor="@color/font_color"
@@ -162,7 +170,7 @@
     </com.google.android.material.card.MaterialCardView>
 
     <com.google.android.material.card.MaterialCardView
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:backgroundTint="#D8F9FF"
         android:layout_marginTop="10sp"
