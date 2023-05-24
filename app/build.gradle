@@ -43,7 +43,6 @@ dependencies {
     implementation "com.airbnb.android:lottie:3.4.0"
 
     implementation("io.github.jan-tennert.supabase:postgrest-kt:0.7.6")
-//    implementation("io.ktor:ktor-client-cio:2.3.3")
     implementation("io.ktor:ktor-client-cio:2.3.0")
 
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.5.1")

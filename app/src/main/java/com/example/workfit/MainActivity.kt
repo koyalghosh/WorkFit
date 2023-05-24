@@ -1,28 +1,63 @@
 package com.example.workfit
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
+import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
-import androidx.appcompat.app.AppCompatDelegate
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import io.github.jan.supabase.SupabaseClient
 import io.github.jan.supabase.createSupabaseClient
 import io.github.jan.supabase.postgrest.Postgrest
 import io.github.jan.supabase.postgrest.postgrest
+import io.github.jan.supabase.postgrest.query.Returning
+
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
 
 class MainActivity : AppCompatActivity() {
-    var tvSignIn : TextView?=null
+    var tvSignIn : TextView ?= null
+    var login : Button ?= null
+    lateinit var email : EditText
+    lateinit var password : EditText
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         installSplashScreen()
         setContentView(R.layout.activity_main)
 
-        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
+        email = findViewById(R.id.edEmail)
+        password = findViewById(R.id.edPass)
 
+        login = findViewById(R.id.login)
+        login?.setOnClickListener {
+            val id = email.text.toString()
+            val pass = password.text.toString()
+            signUp(id,pass)
+            intent = Intent(this,BmiCalc::class.java)
+            startActivity(intent)
+        }
         tvSignIn = findViewById(R.id.signUp)
         tvSignIn?.setOnClickListener{
             Toast.makeText(this,"Hello",Toast.LENGTH_LONG).show()
+        }
+    }
+    private fun signUp(id: String,password: String) {
+        val client = getClient()
+        val user = User(id = id, password = password)
+        try {
+            runBlocking {
+                launch(Dispatchers.IO) {
+                    client.postgrest["users"].insert(
+                        user,
+                        returning = Returning.MINIMAL
+                    ) //returning default to Returning.REPRESENTATION
+                }
+            }
+        }catch(e : Exception){
+            e.printStackTrace()
         }
     }
     private fun getClient() : SupabaseClient {
@@ -33,8 +68,9 @@ class MainActivity : AppCompatActivity() {
             install(Postgrest)
         }
     }
-    private suspend fun getData(){
-        val client = getClient()
-        val supabaseResponse = client.postgrest["Users"].select()
-    }
 }
+@kotlinx.serialization.Serializable
+data class User(
+    val id: String,
+    val password: String
+)
