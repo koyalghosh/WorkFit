@@ -8,6 +8,7 @@
     android:layout_margin="10sp"
     android:gravity="center"
     android:orientation="vertical"
+    android:background="#FAFBED"
     android:layout_marginTop="20sp"
     >
 
@@ -34,7 +35,6 @@
         android:layout_marginBottom="30sp"
         android:layout_marginRight="20sp"
         android:layout_marginLeft="20sp"
-
         >
 
         <LinearLayout
@@ -43,6 +43,7 @@
             android:layout_margin="2sp"
             android:orientation="horizontal"
             android:gravity="center"
+            android:background="#C4F7FD"
             >
 
             <com.google.android.material.textview.MaterialTextView
@@ -61,7 +62,8 @@
                 android:checked="false"
                 android:textSize="20sp"
                 android:padding="8dp"
-                android:textColor="@color/black"/>
+                android:textColor="@color/black"
+                style="@style/CustomSwitchStyle"/>
 
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="wrap_content"
@@ -100,6 +102,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:id="@+id/txtCm"
                 android:text="100"
                 android:layout_marginLeft="25sp"
                 android:inputType="number"
@@ -161,6 +164,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:id="@+id/txtKg"
                 android:text="100"
                 android:layout_marginLeft="40sp"
                 android:inputType="number"
