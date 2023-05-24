@@ -12,4 +12,6 @@
     <color name="shade_white">#E7E7E7</color>
     <color name="orange">#EA6C36</color>
     <color name="brown">#9A5131</color>
+    <color name="font_color">#3CDFFF</color>
+    <color name="button_color">#86C5D8</color>
 </resources>

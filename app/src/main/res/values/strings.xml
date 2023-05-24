@@ -3,6 +3,4 @@
     <string name="e_mail">E-mail</string>
     <string name="enter_password">Password</string>
     <string name="sign_up">Sign-Up</string>
-    <color name="font_color">#3CDFFF</color>
-    <color name="button_color">#86C5D8</color>
 </resources>

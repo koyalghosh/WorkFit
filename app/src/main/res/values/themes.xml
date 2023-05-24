@@ -3,6 +3,6 @@
     <style name="Theme.WorkFit" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!--full screen display-->
         <item name="android:windowFullscreen">true</item>
-        <item name="android:windowBackground">#6EB2CC</item>
+        <item name="android:windowBackground">#CAE9F5</item>
     </style>
 </resources>

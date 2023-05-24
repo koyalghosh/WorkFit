@@ -8,7 +8,7 @@
     android:layout_margin="10sp"
     android:gravity="center"
     android:orientation="vertical"
-    android:background="#FAFBED"
+    android:background="#CAE9F5"
     android:layout_marginTop="20sp"
     >
 
@@ -16,8 +16,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="BMI Calculator"
+        android:fontFamily="monospace"
         android:textSize="30sp"
-        android:textColor="@color/black"
+        android:textColor="@color/font_color"
         android:layout_marginBottom="10sp"
         android:textStyle="bold"
         />
@@ -31,6 +32,7 @@
     <com.google.android.material.card.MaterialCardView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="#3CDFFF"
         android:layout_marginTop="10sp"
         android:layout_marginBottom="30sp"
         android:layout_marginRight="20sp"
@@ -50,8 +52,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="cm/kg"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:fontFamily="monospace"
                 android:textStyle="bold"
-                android:textColor="@color/black"
+                android:textColor="@color/font_color"
                 android:textSize="20sp"
                 />
 
@@ -61,15 +66,19 @@
                 android:layout_height="wrap_content"
                 android:checked="false"
                 android:textSize="20sp"
-                android:padding="8dp"
-                android:textColor="@color/black"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:textColor="@color/font_color"
                 style="@style/CustomSwitchStyle"/>
 
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="feets/pounds"
-                android:textColor="@color/black"
+                android:text="ft/lbs"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp"
+                android:fontFamily="monospace"
+                android:textColor="@color/font_color"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 />
@@ -80,10 +89,12 @@
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:backgroundTint="#D8F9FF"
         android:layout_marginTop="10sp"
         android:layout_marginBottom="10sp"
         android:layout_marginRight="20sp"
-        android:layout_marginLeft="20sp">
+        android:layout_marginLeft="20sp"
+        app:cardCornerRadius="25dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -94,38 +105,47 @@
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
                 android:text="Height"
-                android:textColor="@color/black"
+                android:fontFamily="monospace"
+                android:textColor="@color/font_color"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:layout_marginRight="20sp"/>
+
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtCm"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/txtCm"
-                android:text="100"
-                android:layout_marginLeft="25sp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="5dp"
+                android:backgroundTint="#D8F9FF"
                 android:inputType="number"
-                android:textColor="@color/black"
-                android:textSize="20sp" />
+                android:text="0"
+                android:textColor="@color/font_color"
+                android:textSize="20sp"
+                android:visibility="visible" />
+
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/cm"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="5sp"
                 android:text="cm"
-                android:textSize="20sp"
-                android:textColor="@color/black"
-                android:layout_marginLeft="5sp"/>
+                android:fontFamily="monospace"
+                android:textColor="@color/font_color"
+                android:textSize="20sp" />
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/numInch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="100"
+                android:text="0"
                 android:layout_marginLeft="25sp"
                 android:inputType="number"
                 android:visibility="invisible"
-                android:textColor="@color/black"
+                android:textColor="@color/font_color"
                 android:textSize="20sp" />
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="wrap_content"
@@ -133,8 +153,9 @@
                 android:id="@+id/inch"
                 android:visibility="invisible"
                 android:text="inch"
+                android:fontFamily="monospace"
                 android:textSize="20sp"
-                android:textColor="@color/black"
+                android:textColor="@color/font_color"
                 android:layout_marginLeft="5sp"/>
 
         </LinearLayout>
@@ -143,10 +164,12 @@
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:backgroundTint="#D8F9FF"
         android:layout_marginTop="10sp"
         android:layout_marginBottom="10sp"
         android:layout_marginRight="20sp"
-        android:layout_marginLeft="20sp">
+        android:layout_marginLeft="20sp"
+        app:cardCornerRadius="25dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -157,37 +180,51 @@
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="monospace"
                 android:text="Weight"
-                android:textColor="@color/black"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:layout_marginRight="20sp"
+                android:textColor="@color/font_color"
                 android:textSize="20sp"
                 android:textStyle="bold" />
+
             <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:id="@+id/txtKg"
-                android:text="100"
-                android:layout_marginLeft="40sp"
-                android:inputType="number"
-                android:textColor="@color/black"
-                android:textSize="20sp" />
-            <com.google.android.material.textview.MaterialTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="5dp"
+                android:backgroundTint="#D8F9FF"
+                android:inputType="number"
+                android:text="0"
+                android:textColor="@color/font_color"
+                android:textSize="20sp" />
+
+            <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/kg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5sp"
+                android:fontFamily="monospace"
                 android:text="kg"
+                android:textColor="@color/font_color"
                 android:textSize="20sp"
-                android:textColor="@color/black"
-                android:layout_marginLeft="5sp"/>
+                android:visibility="visible" />
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
         android:id="@+id/calcBMI"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="20sp"
+        android:gravity="center"
+        android:paddingStart="0dp"
+        android:paddingEnd="0dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/button_color"
         android:text="View Result"
+        android:fontFamily="monospace"
+        android:textColor="@color/font_color"
         android:textStyle="bold"/>
 
 </LinearLayout>
