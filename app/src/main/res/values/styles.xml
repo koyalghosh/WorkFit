@@ -3,4 +3,9 @@
     <style name="SpinnerTextAppearance" parent="TextAppearance.AppCompat.Widget.DropDownItem">
         <item name="android:textSize">20sp</item>
     </style>
+    <style name="CustomSwitchStyle" parent="Widget.AppCompat.CompoundButton.Switch">
+        <item name="android:thumb">@drawable/custom_switch_thumb</item>
+        <item name="android:track">@drawable/custom_switch_track</item>
+    </style>
+
 </resources>
