@@ -7,13 +7,15 @@ import android.os.Handler
 import android.os.Looper
 import android.widget.ImageButton
 import android.widget.TextView
+import android.widget.Toast
+import com.airbnb.lottie.LottieAnimationView
 
 class MainMenu : AppCompatActivity() {
     var txtQuote: TextView ?= null
-    var ibWater: ImageButton ?=null
-    var ibBMI: ImageButton ?= null
-    var ibWorkout: ImageButton ?= null
-    var ibDiet : ImageButton ?=null
+    var ibWater: LottieAnimationView ?=null
+    var ibBMI: LottieAnimationView ?= null
+    var ibWorkout: LottieAnimationView ?= null
+    var ibDiet : LottieAnimationView ?=null
 
     private val handler = Handler(Looper.getMainLooper())
     private var currentIndex = 0
@@ -49,17 +51,17 @@ class MainMenu : AppCompatActivity() {
         ibDiet = findViewById(R.id.diet)
 
         ibWater?.setOnClickListener {
-
+            Toast.makeText(this,"Water",Toast.LENGTH_LONG).show()
         }
         ibBMI?.setOnClickListener {
             intent = Intent(this,BmiCalc::class.java)
             startActivity(intent)
         }
         ibWorkout?.setOnClickListener {
-
+            Toast.makeText(this,"Workout",Toast.LENGTH_LONG).show()
         }
         ibDiet?.setOnClickListener {
-
+            Toast.makeText(this,"Diet",Toast.LENGTH_LONG).show()
         }
 
     }
