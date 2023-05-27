@@ -21,16 +21,16 @@
         android:textSize="20sp"
         android:textStyle="bold"
         android:layout_gravity="center"
-        android:layout_marginBottom="20sp"/>
+        android:layout_marginBottom="20sp"
+        android:layout_marginTop="20sp"/>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/text1"
         android:layout_width="294dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="51dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="51dp"
-
         android:hint="@string/username"
         app:boxBackgroundColor="#3CDFFF"
         app:boxCornerRadiusBottomEnd="25dp"
@@ -129,5 +129,15 @@
 
 
     </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/createAcc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create Account"
+        android:layout_gravity="center"
+        app:cornerRadius="10sp"
+        android:layout_marginTop="20sp"
+        />
 
 </LinearLayout>
