@@ -8,7 +8,7 @@
     android:layout_margin="10sp"
     tools:context=".SignUp">
     <ImageView
-        android:layout_width="match_parent"
+        android:layout_width="189dp"
         android:layout_height="64dp"
         android:layout_gravity="center"
         android:src="@drawable/logoandname"
@@ -21,14 +21,16 @@
         android:textSize="20sp"
         android:textStyle="bold"
         android:layout_gravity="center"
-        android:layout_marginBottom="20sp"/>
+        android:layout_marginBottom="20sp"
+        android:layout_marginTop="20sp"/>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/text1"
         android:layout_width="294dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-
+        android:layout_marginStart="51dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="51dp"
         android:hint="@string/username"
         app:boxBackgroundColor="#3CDFFF"
         app:boxCornerRadiusBottomEnd="25dp"
@@ -37,7 +39,6 @@
         app:boxCornerRadiusTopStart="25dp"
         app:boxStrokeWidth="0dp"
         app:boxStrokeWidthFocused="0dp"
-        android:layout_marginBottom="25dp"
         app:startIconDrawable="@drawable/man_icon">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -53,7 +54,9 @@
         android:id="@+id/text2"
         android:layout_width="294dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="51dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="51dp"
         android:hint="@string/e_mail"
         app:boxBackgroundColor="#3CDFFF"
         app:boxCornerRadiusBottomEnd="25dp"
@@ -62,7 +65,6 @@
         app:boxCornerRadiusTopStart="25dp"
         app:boxStrokeWidth="0dp"
         app:boxStrokeWidthFocused="0dp"
-        android:layout_marginBottom="25dp"
         app:startIconDrawable="@drawable/man_icon">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -78,7 +80,9 @@
         android:id="@+id/text3"
         android:layout_width="294dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="51dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="51dp"
         android:hint="@string/enter_password"
         app:boxBackgroundColor="#3CDFFF"
         app:boxCornerRadiusBottomEnd="25dp"
@@ -88,8 +92,7 @@
         app:endIconMode="password_toggle"
         app:boxStrokeWidth="0dp"
         app:boxStrokeWidthFocused="0dp"
-        android:layout_marginBottom="25dp"
-        app:startIconDrawable="@drawable/password_icon">
+        app:startIconDrawable="@drawable/password_icon">>
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/pass"
@@ -104,7 +107,10 @@
         android:id="@+id/text4"
         android:layout_width="294dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="51dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="51dp"
+        android:layout_marginBottom="20dp"
         android:hint="@string/cPass"
         app:boxBackgroundColor="#3CDFFF"
         app:boxCornerRadiusBottomEnd="25dp"
@@ -114,7 +120,6 @@
         app:boxStrokeWidth="0dp"
         app:boxStrokeWidthFocused="0dp"
         app:endIconMode="password_toggle"
-        android:layout_marginBottom="25dp"
         app:startIconDrawable="@drawable/password_icon">>
 
         <com.google.android.material.textfield.TextInputEditText
@@ -125,15 +130,14 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/createAcc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:textColor="@color/font_color"
-        android:textStyle="bold"
-        android:backgroundTint="@color/button_color"
-        android:fontFamily="monospace"
-        android:text="@string/sign_up"
-        android:gravity="center_horizontal"/>
+        android:text="Create Account"
+        android:layout_gravity="center"
+        app:cornerRadius="10sp"
+        android:layout_marginTop="20sp"
+        />
 
 </LinearLayout>
