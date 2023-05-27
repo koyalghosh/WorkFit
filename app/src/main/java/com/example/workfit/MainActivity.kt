@@ -1,5 +1,6 @@
 package com.example.workfit
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
@@ -16,7 +17,8 @@ class MainActivity : AppCompatActivity() {
 
         tvSignIn = findViewById(R.id.signIn)
         tvSignIn?.setOnClickListener{
-            Toast.makeText(this,"Hello",Toast.LENGTH_LONG).show()
+            val intent = Intent(this,MainActivity2::class.java )
+            startActivity(intent)
         }
     }
 }
