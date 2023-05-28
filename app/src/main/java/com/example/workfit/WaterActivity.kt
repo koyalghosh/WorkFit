@@ -19,7 +19,7 @@ class WaterActivity : AppCompatActivity() {
         binding?.flStart?.setOnClickListener{
             timesClicked += 1
             tvCount.text = "$timesClicked/10 Glass"
-            if (timesClicked >= 10) {
+            if (timesClicked > 10) {
                 Toast.makeText(this, "Daily Goal Completed, Stay Hydrated !", Toast.LENGTH_LONG).show()
             }
             else{

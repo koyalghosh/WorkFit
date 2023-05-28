@@ -5,7 +5,6 @@
     android:id="@+id/linearLayout2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="10sp"
     android:background="#CAE9F5"
     android:gravity="center"
     android:paddingTop="4dp"
