@@ -33,11 +33,12 @@ class MainActivity : AppCompatActivity() {
 
         login = findViewById(R.id.login)
         login?.setOnClickListener {
-            val id = email.text.toString()
-            val pass = password.text.toString()
-            signUp(id,pass)
-            intent = Intent(this,BmiCalc::class.java)
+//            val id = email.text.toString()
+//            val pass = password.text.toString()
+//            signUp(id,pass)
+            intent = Intent(this,MainMenu::class.java)
             startActivity(intent)
+            finish()
         }
         tvSignIn = findViewById(R.id.signUp)
         tvSignIn?.setOnClickListener{
