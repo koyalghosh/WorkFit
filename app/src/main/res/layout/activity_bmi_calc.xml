@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".BmiCalc"
-    android:layout_margin="5sp"
-    android:gravity="center"
+    android:gravity="center|top"
     android:orientation="vertical"
-    android:background="#CAE9F5"
+    android:background="#FBE5D8"
     >
 
     <ImageView
         android:layout_width="127dp"
         android:layout_height="34dp"
         android:layout_gravity="center_horizontal"
-        android:layout_margin="10dp"
+        android:layout_marginBottom="10sp"
         android:src="@drawable/logoandname" />
 
     <com.google.android.material.textview.MaterialTextView
@@ -23,11 +23,14 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginBottom="10sp"
+        android:padding="5sp"
         android:fontFamily="monospace"
         android:text="BMI Calculator"
         android:textColor="@color/heading_color"
-        android:textSize="30sp"
-        android:textStyle="bold" />
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:background="@drawable/rounded_corner"
+        android:backgroundTint="#3CDFFF"/>
 
     <ImageView
         android:layout_width="192dp"
