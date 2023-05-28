@@ -51,7 +51,9 @@ class MainMenu : AppCompatActivity() {
         ibDiet = findViewById(R.id.diet)
 
         ibWater?.setOnClickListener {
-            Toast.makeText(this,"Water",Toast.LENGTH_LONG).show()
+//            Toast.makeText(this,"Water",Toast.LENGTH_LONG).show()
+            intent = Intent(this,MainActivity2::class.java)
+            startActivity(intent)
         }
         ibBMI?.setOnClickListener {
             intent = Intent(this,BmiCalc::class.java)
