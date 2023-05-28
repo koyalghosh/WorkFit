@@ -42,6 +42,8 @@ class MainActivity : AppCompatActivity() {
         tvSignIn = findViewById(R.id.signUp)
         tvSignIn?.setOnClickListener{
             Toast.makeText(this,"Hello",Toast.LENGTH_LONG).show()
+//            intent = Intent(this,MainActivity2::class.java)
+//            startActivity(intent)
         }
     }
     private fun signUp(id: String,password: String) {
