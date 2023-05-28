@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:layout_margin="10sp"
+    android:background="@drawable/bgwater">
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:text="Drink Water Reminder"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="50sp"/>
+
+
+    <FrameLayout
+        android:layout_width="200sp"
+        android:layout_height="200sp"
+        android:id="@+id/flStart"
+        android:layout_gravity="center"
+        android:background="@drawable/item_oval_ripple"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <ImageView
+                android:id="@+id/icon"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:src="@drawable/water"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/tvDrinkwater"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/icon"
+                android:layout_centerHorizontal="true"
+                android:text="Daily drink target"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/tvDrinkwater"
+                android:layout_marginBottom="10dp"
+                android:layout_centerHorizontal="true"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:text="0/10 Glass" />
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/glass1"
+                android:layout_width="80dp"
+                android:layout_height="200dp"
+                app:lottie_autoPlay="false"
+                app:lottie_loop="false"
+                app:lottie_rawRes="@raw/glasswater"
+
+                />
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/glass2"
+                android:layout_width="80dp"
+                android:layout_height="200dp"
+                app:lottie_autoPlay="false"
+                app:lottie_loop="false"
+                app:lottie_rawRes="@raw/glasswater"
+
+            />
+            <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/glass3"
+            android:layout_width="80dp"
+            android:layout_height="200dp"
+            app:lottie_autoPlay="false"
+            app:lottie_loop="false"
+            app:lottie_rawRes="@raw/glasswater"
+
+            />
+            <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/glass4"
+            android:layout_width="80dp"
+            android:layout_height="200dp"
+            app:lottie_autoPlay="false"
+            app:lottie_loop="false"
+            app:lottie_rawRes="@raw/glasswater"
+
+            />
+            <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/glass5"
+            android:layout_width="80dp"
+            android:layout_height="200dp"
+            app:lottie_autoPlay="false"
+            app:lottie_loop="false"
+            app:lottie_rawRes="@raw/glasswater"
+
+            />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/glass6"
+            android:layout_width="80dp"
+            android:layout_height="200dp"
+            app:lottie_autoPlay="false"
+            app:lottie_loop="false"
+            app:lottie_rawRes="@raw/glasswater"
+            android:layout_marginTop="10sp"
+            />
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/glass7"
+            android:layout_width="80dp"
+            android:layout_height="200dp"
+            app:lottie_autoPlay="false"
+            app:lottie_loop="false"
+            app:lottie_rawRes="@raw/glasswater"
+            android:layout_marginTop="10sp"
+            />
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/glass8"
+            android:layout_width="80dp"
+            android:layout_height="200dp"
+            app:lottie_autoPlay="false"
+            app:lottie_loop="false"
+            app:lottie_rawRes="@raw/glasswater"
+            android:layout_marginTop="10sp"
+            />
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/glass9"
+            android:layout_width="80dp"
+            android:layout_height="200dp"
+            app:lottie_autoPlay="false"
+            app:lottie_loop="false"
+            app:lottie_rawRes="@raw/glasswater"
+            android:layout_marginTop="10sp"
+            />
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/glass10"
+            android:layout_width="80dp"
+            android:layout_height="200dp"
+            app:lottie_autoPlay="false"
+            app:lottie_loop="false"
+            app:lottie_rawRes="@raw/glasswater"
+            android:layout_marginTop="10sp"
+            />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
