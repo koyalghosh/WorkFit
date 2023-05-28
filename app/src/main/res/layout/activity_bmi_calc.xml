@@ -128,7 +128,8 @@
                 android:layout_marginRight="5dp"
                 android:backgroundTint="#D8F9FF"
                 android:inputType="number"
-                android:text="0"
+                android:hint="0"
+                android:textColorHint="@color/font_color"
                 android:textColor="@color/font_color"
                 android:textSize="20sp"
                 android:visibility="visible" />
@@ -148,7 +149,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingEnd="10dp"
-                android:text="0"
+                android:hint="0"
+                android:textColorHint="@color/font_color"
                 android:backgroundTint="#D8F9FF"
                 android:layout_marginLeft="15sp"
                 android:inputType="number"
@@ -205,7 +207,8 @@
                 android:layout_marginRight="5dp"
                 android:backgroundTint="#D8F9FF"
                 android:inputType="number"
-                android:text="0"
+                android:hint="0"
+                android:textColorHint="@color/font_color"
                 android:textColor="@color/font_color"
                 android:textSize="20sp" />
 
