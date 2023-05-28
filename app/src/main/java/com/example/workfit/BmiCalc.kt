@@ -1,5 +1,6 @@
 package com.example.workfit
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -8,6 +9,7 @@ import android.widget.EditText
 import android.widget.Switch
 import android.widget.TextView
 import android.widget.Toast
+import java.text.DecimalFormat
 
 class BmiCalc : AppCompatActivity() {
     var switch: Switch ?= null
@@ -41,10 +43,23 @@ class BmiCalc : AppCompatActivity() {
                 weight = etKg?.text.toString().toFloat()
                 height /= 100
                 bmi = weight/(height*height)
-                Toast.makeText(this,bmi.toString(),Toast.LENGTH_LONG).show()
+                val intent = Intent(this,BMIresult::class.java)
+                intent.putExtra("bmi",DecimalFormat("##.#").format(bmi))
+                startActivity(intent)
+                //Toast.makeText(this, DecimalFormat("##.#").format(bmi),Toast.LENGTH_LONG).show()
             }else{
                 //feet-inch to m
-                Toast.makeText(this,bmi.toString(),Toast.LENGTH_LONG).show()
+                height = etCm?.text.toString().toFloat()
+                var inch = etInch?.text.toString().toFloat()
+                var temp = (height*30.48f) + (inch * 2.54f)
+                temp /= 100
+                weight = etKg?.text.toString().toFloat()
+                weight *= 0.454f
+                bmi = weight/(temp*temp)
+
+                val intent = Intent(this,BMIresult::class.java)
+                intent.putExtra("bmi",DecimalFormat("##.#").format(bmi))
+                startActivity(intent)
             }
         }
 

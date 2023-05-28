@@ -19,7 +19,7 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 
 class MainActivity : AppCompatActivity() {
-    var tvSignIn : TextView ?= null
+    var tvSignUp : TextView ?= null
     var login : Button ?= null
     lateinit var email : EditText
     lateinit var password : EditText
@@ -40,12 +40,12 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
-        tvSignIn = findViewById(R.id.signUp)
-        tvSignIn?.setOnClickListener{
-//            Toast.makeText(this,"Hello",Toast.LENGTH_LONG).show()
+        tvSignUp = findViewById(R.id.signUp)
+        tvSignUp?.setOnClickListener{
             intent = Intent(this,SignUp::class.java)
             startActivity(intent)
         }
+
     }
     private fun signUp(id: String,password: String) {
         val client = getClient()
