@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import android.widget.ImageButton
 import android.widget.TextView
 import android.widget.Toast
 import com.airbnb.lottie.LottieAnimationView
@@ -52,7 +51,7 @@ class MainMenu : AppCompatActivity() {
 
         ibWater?.setOnClickListener {
 //            Toast.makeText(this,"Water",Toast.LENGTH_LONG).show()
-            intent = Intent(this,MainActivity2::class.java)
+            intent = Intent(this,WaterActivity::class.java)
             startActivity(intent)
         }
         ibBMI?.setOnClickListener {
