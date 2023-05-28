@@ -14,7 +14,7 @@
         android:theme="@style/Theme.WorkFit"
         tools:targetApi="31">
         <activity
-            android:name=".YoganMeditation"
+            android:name=".BMIresult"
             android:exported="false" />
         <activity
             android:name=".SignUp"
