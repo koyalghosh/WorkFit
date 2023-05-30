@@ -59,7 +59,8 @@ class MainMenu : AppCompatActivity() {
             startActivity(intent)
         }
         ibWorkout?.setOnClickListener {
-            Toast.makeText(this,"Workout",Toast.LENGTH_LONG).show()
+            intent = Intent(this,Workout::class.java)
+            startActivity(intent)
         }
         ibDiet?.setOnClickListener {
             Toast.makeText(this,"Diet",Toast.LENGTH_LONG).show()
