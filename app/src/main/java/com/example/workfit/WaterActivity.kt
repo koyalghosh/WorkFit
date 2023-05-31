@@ -12,7 +12,8 @@ import com.example.workfit.databinding.ActivityWaterBinding
 
 class WaterActivity : AppCompatActivity() {
     private var binding: ActivityWaterBinding?= null
-    var water_text : TextView ?= null
+
+    var waterText : TextView ?= null
 
     private val handler = Handler(Looper.getMainLooper())
     private var currentIndex = 0
@@ -28,7 +29,7 @@ class WaterActivity : AppCompatActivity() {
     private val runnable = object : Runnable {
         override fun run() {
             // Update the text in the TextView
-            water_text?.text = texts[currentIndex]
+            waterText?.text = texts[currentIndex]
 
             // Increment the index or reset if it exceeds the array length
             currentIndex = (currentIndex + 1) % texts.size
@@ -37,6 +38,7 @@ class WaterActivity : AppCompatActivity() {
             handler.postDelayed(this, interval)
         }
     }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityWaterBinding.inflate(layoutInflater)
@@ -44,45 +46,45 @@ class WaterActivity : AppCompatActivity() {
 
         //for changing text in water_text
         handler.postDelayed(runnable, interval)
-        water_text = findViewById(R.id.drink_water_text)
+        waterText = findViewById(R.id.drink_water_text)
 
-        var tvCount : TextView = findViewById(R.id.tvCount)
-        var timesClicked = 0
-        binding?.flStart?.setOnClickListener{
-            timesClicked += 1
-            tvCount.text = "$timesClicked/10 Glass"
-            if (timesClicked > 10) {
-                Toast.makeText(this, "Daily Goal Completed, Stay Hydrated !", Toast.LENGTH_LONG).show()
-            }
-            else{
-                if(timesClicked==1)
-                    binding?.glass1?.playAnimation()
-                if(timesClicked==2)
-                    binding?.glass2?.playAnimation()
-                if(timesClicked==3)
-                    binding?.glass3?.playAnimation()
-                if(timesClicked==4)
-                    binding?.glass4?.playAnimation()
-                if(timesClicked==5)
-                    binding?.glass5?.playAnimation()
-                if(timesClicked==6)
-                    binding?.glass6?.playAnimation()
-                if(timesClicked==7)
-                    binding?.glass7?.playAnimation()
-                if(timesClicked==8)
-                    binding?.glass8?.playAnimation()
-                if(timesClicked==9)
-                    binding?.glass9?.playAnimation()
-                if(timesClicked==10)
-                    binding?.glass10?.playAnimation()
+            var tvCount: TextView = findViewById(R.id.tvCount)
+            var timesClicked = 0
+            binding?.flStart?.setOnClickListener {
+                timesClicked += 1
+                tvCount.text = "$timesClicked/10 Glass"
+                if (timesClicked > 10) {
+                    Toast.makeText(this, "Daily Goal Completed, Stay Hydrated !", Toast.LENGTH_LONG)
+                        .show()
+                } else {
+                    if (timesClicked == 1)
+                        binding?.glass1?.playAnimation()
+                    if (timesClicked == 2)
+                        binding?.glass2?.playAnimation()
+                    if (timesClicked == 3)
+                        binding?.glass3?.playAnimation()
+                    if (timesClicked == 4)
+                        binding?.glass4?.playAnimation()
+                    if (timesClicked == 5)
+                        binding?.glass5?.playAnimation()
+                    if (timesClicked == 6)
+                        binding?.glass6?.playAnimation()
+                    if (timesClicked == 7)
+                        binding?.glass7?.playAnimation()
+                    if (timesClicked == 8)
+                        binding?.glass8?.playAnimation()
+                    if (timesClicked == 9)
+                        binding?.glass9?.playAnimation()
+                    if (timesClicked == 10)
+                        binding?.glass10?.playAnimation()
+                }
             }
         }
-    }
 
-    //for water_text
-    override fun onDestroy() {
-        super.onDestroy()
-        // Remove any pending callbacks to prevent memory leaks
-        handler.removeCallbacks(runnable)
+        //for water_text
+        override fun onDestroy() {
+            super.onDestroy()
+            // Remove any pending callbacks to prevent memory leaks
+            handler.removeCallbacks(runnable)
+        }
     }
-}
