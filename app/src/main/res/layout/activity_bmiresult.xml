@@ -7,9 +7,7 @@
     tools:context=".BMIresult"
     android:gravity="center"
     android:layout_margin="5sp"
-    android:orientation="vertical"
-    android:fitsSystemWindows="true"
-    >
+    android:orientation="vertical">
 
     <ImageView
         android:layout_width="127dp"
