@@ -1,25 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- item_layout.xml -->
 
-<LinearLayout
+<com.google.android.material.card.MaterialCardView
+    android:id="@+id/card"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:padding="2dp">
+    android:padding="2dp"
+    app:cardBackgroundColor="@color/shade_white"
+    android:layout_margin="10sp">
 
-    <com.google.android.material.card.MaterialCardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10sp"
-        >
-
-        <LinearLayout
+    <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="Cardio"
@@ -32,6 +29,7 @@
                 android:textColor="@color/black"/>
 
             <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lavExercise"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="end"
@@ -41,105 +39,4 @@
                 app:lottie_rawRes="@raw/cardio" />
         </LinearLayout>
 
-    </com.google.android.material.card.MaterialCardView>
-
-    <com.google.android.material.card.MaterialCardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10sp">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <com.google.android.material.textview.MaterialTextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="Gym"
-                android:gravity="start"
-                android:layout_weight="3"
-                android:fontFamily="monospace"
-                android:padding="30sp"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:textColor="@color/black"/>
-
-            <com.airbnb.lottie.LottieAnimationView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_gravity="end"
-                android:layout_weight="1"
-                app:lottie_autoPlay="true"
-                app:lottie_loop="true"
-                app:lottie_rawRes="@raw/gym_exercise" />
-        </LinearLayout>
-
-    </com.google.android.material.card.MaterialCardView>
-
-    <com.google.android.material.card.MaterialCardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10sp">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <com.google.android.material.textview.MaterialTextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="Home Workout"
-                android:gravity="start"
-                android:layout_weight="3"
-                android:fontFamily="monospace"
-                android:padding="30sp"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:textColor="@color/black"/>
-
-
-            <com.airbnb.lottie.LottieAnimationView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_gravity="end"
-                android:layout_weight="1"
-                app:lottie_autoPlay="true"
-                app:lottie_loop="true"
-                app:lottie_rawRes="@raw/home_workout" />
-        </LinearLayout>
-
-    </com.google.android.material.card.MaterialCardView>
-
-    <com.google.android.material.card.MaterialCardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10sp">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <com.google.android.material.textview.MaterialTextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="Yoga"
-                android:gravity="start"
-                android:layout_weight="3"
-                android:fontFamily="monospace"
-                android:padding="30sp"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:textColor="@color/black"/>
-
-            <com.airbnb.lottie.LottieAnimationView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_gravity="end"
-                android:layout_weight="1"
-                app:lottie_autoPlay="true"
-                app:lottie_loop="true"
-                app:lottie_rawRes="@raw/yoga" />
-        </LinearLayout>
-
-    </com.google.android.material.card.MaterialCardView>
-</LinearLayout>
+</com.google.android.material.card.MaterialCardView>
