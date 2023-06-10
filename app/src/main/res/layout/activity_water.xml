@@ -8,28 +8,9 @@
     tools:context=".MainActivity"
     android:gravity="center|top"
     android:orientation="vertical"
-    android:background="#DEEBF7">
-
-    <ImageView
-        android:layout_width="127dp"
-        android:layout_height="34dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="10sp"
-        android:src="@drawable/logoandname" />
-
-
-    <com.google.android.material.textview.MaterialTextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:padding="5sp"
-        android:fontFamily="monospace"
-        android:text="Water Tracker"
-        android:textColor="@color/heading_color"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:background="@drawable/rounded_corner"
-        android:backgroundTint="#3CDFFF"/>
+    android:background="#DEEBF7"
+    android:fitsSystemWindows="true"
+    >
 
     <FrameLayout
         android:layout_width="367dp"
@@ -41,7 +22,7 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_gravity="left"
-            android:src="@drawable/water_drop"></ImageView>
+            android:src="@drawable/water_drop" />
 
         <TextView
             android:id="@+id/drink_water_text"
@@ -56,7 +37,7 @@
             android:paddingEnd="0dp"
             android:text="Let's Drink Some Water!"
             android:textSize="19dp"
-            android:textStyle="bold|italic"></TextView>
+            android:textStyle="bold|italic" />
 
     </FrameLayout>
 
@@ -124,8 +105,9 @@
 
             <com.airbnb.lottie.LottieAnimationView
                 android:id="@+id/glass1"
-                android:layout_width="80dp"
+                android:layout_width="0dp"
                 android:layout_height="100dp"
+                android:layout_weight="1"
                 app:lottie_autoPlay="false"
                 app:lottie_loop="false"
                 app:lottie_rawRes="@raw/water_button_animation"
@@ -133,8 +115,9 @@
                 />
             <com.airbnb.lottie.LottieAnimationView
                 android:id="@+id/glass2"
-                android:layout_width="80dp"
+                android:layout_width="0dp"
                 android:layout_height="100dp"
+                android:layout_weight="1"
                 app:lottie_autoPlay="false"
                 app:lottie_loop="false"
                 app:lottie_rawRes="@raw/water_button_animation"
@@ -142,8 +125,9 @@
             />
             <com.airbnb.lottie.LottieAnimationView
             android:id="@+id/glass3"
-            android:layout_width="80dp"
+            android:layout_width="0dp"
             android:layout_height="100dp"
+                android:layout_weight="1"
             app:lottie_autoPlay="false"
             app:lottie_loop="false"
             app:lottie_rawRes="@raw/water_button_animation"
@@ -151,8 +135,9 @@
             />
             <com.airbnb.lottie.LottieAnimationView
             android:id="@+id/glass4"
-            android:layout_width="80dp"
+            android:layout_width="0dp"
             android:layout_height="100dp"
+                android:layout_weight="1"
             app:lottie_autoPlay="false"
             app:lottie_loop="false"
             app:lottie_rawRes="@raw/water_button_animation"
@@ -160,8 +145,9 @@
             />
             <com.airbnb.lottie.LottieAnimationView
             android:id="@+id/glass5"
-            android:layout_width="80dp"
+            android:layout_width="0dp"
             android:layout_height="100dp"
+                android:layout_weight="1"
             app:lottie_autoPlay="false"
             app:lottie_loop="false"
             app:lottie_rawRes="@raw/water_button_animation"
@@ -177,7 +163,8 @@
 
         <com.airbnb.lottie.LottieAnimationView
             android:id="@+id/glass6"
-            android:layout_width="80dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="100dp"
             app:lottie_autoPlay="false"
             app:lottie_loop="false"
@@ -185,7 +172,8 @@
             />
         <com.airbnb.lottie.LottieAnimationView
             android:id="@+id/glass7"
-            android:layout_width="80dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="100dp"
             app:lottie_autoPlay="false"
             app:lottie_loop="false"
@@ -193,7 +181,8 @@
             />
         <com.airbnb.lottie.LottieAnimationView
             android:id="@+id/glass8"
-            android:layout_width="80dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="100dp"
             app:lottie_autoPlay="false"
             app:lottie_loop="false"
@@ -201,7 +190,8 @@
             />
         <com.airbnb.lottie.LottieAnimationView
             android:id="@+id/glass9"
-            android:layout_width="80dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="100dp"
             app:lottie_autoPlay="false"
             app:lottie_loop="false"
@@ -209,7 +199,8 @@
             />
         <com.airbnb.lottie.LottieAnimationView
             android:id="@+id/glass10"
-            android:layout_width="80dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="100dp"
             app:lottie_autoPlay="false"
             app:lottie_loop="false"

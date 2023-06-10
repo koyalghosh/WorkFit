@@ -5,4 +5,31 @@
     <string name="sign_up">Sign-Up</string>
     <string name="username">Username</string>
     <string name="cPass">Confirm Password</string>
+    <string name="workout_planner">Workout Planner</string>
+    <string name="diet_planner">Diet Planner</string>
+    <string name="bmi_calculator">BMI Calculator</string>
+    <string name="water_tracker">Water Tracker</string>
+    <string name="i_hated_every_minute_of_training_but_i_said_don_t_quit_suffer_now_and_live_the_rest_of_your_life_as_a_champion_n_muhammad_ali">“I hated every minute of training, but I said, ‘Don’t quit. Suffer now and live the rest of your life as a champion.” \n– Muhammad Ali</string>
+    <string name="todo">TODO</string>
+    <string name="not_a_member">Not a member?</string>
+    <string name="login">Login</string>
+    <string name="workout">Workout</string>
+    <string name="diet">Diet</string>
+    <string name="about_us">About Us</string>
+    <string name="faq_s">FAQ\'s</string>
+    <string name="logout">Logout</string>
+    <string name="title_activity_navigation">NavigationActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu">Menu</string>
+    <string name="navOpen">Open</string>
+    <string name="navClose">Close</string>
 </resources>

@@ -23,6 +23,7 @@ class MainActivity : AppCompatActivity() {
     var login : Button ?= null
     lateinit var email : EditText
     lateinit var password : EditText
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         installSplashScreen()
