@@ -9,6 +9,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import com.airbnb.lottie.LottieAnimationView
@@ -47,25 +48,15 @@ class MainMenu : AppCompatActivity(),NavigationView.OnNavigationItemSelectedList
             handler.postDelayed(this, interval)
         }
     }
-
-    /*fun onNavigationItemSelected(item : MenuItem): Boolean{
-        when (item.itemId) {
-            R.id.nav_menu -> startActivity(Intent(this, MainMenu::class.java))
-            R.id.nav_water -> startActivity(Intent(this, WaterActivity::class.java))
-            R.id.nav_bmi -> startActivity(Intent(this,BmiCalc::class.java))
-        }
-        drawer.closeDrawer(GravityCompat.START)
-        return true
-    }*/
-
     override fun onCreate(savedInstanceState: Bundle?){
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_menu)
 
         drawerLayout = findViewById(R.id.my_drawer_layout)
 
+        val toolbar = findViewById<Toolbar>(R.id.toolbar)
 
-        actionBarDrawerToggle = ActionBarDrawerToggle(this, drawerLayout, R.string.navOpen, R.string.navClose)
+        actionBarDrawerToggle = ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navOpen, R.string.navClose)
         actionBarDrawerToggle.isDrawerIndicatorEnabled = true
 
         drawerLayout.addDrawerListener(actionBarDrawerToggle)
@@ -73,6 +64,9 @@ class MainMenu : AppCompatActivity(),NavigationView.OnNavigationItemSelectedList
 
         navView = findViewById(R.id.nav_view)
         navView?.setNavigationItemSelectedListener(this)
+
+
+        setSupportActionBar(toolbar)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
@@ -114,9 +108,12 @@ class MainMenu : AppCompatActivity(),NavigationView.OnNavigationItemSelectedList
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when(item.itemId){
-            R.id.nav_menu -> startActivity(Intent(this,MainMenu::class.java))
+            R.id.nav_profile -> Toast.makeText(this,"Profile Page (TODO)",Toast.LENGTH_SHORT).show()
             R.id.nav_water -> startActivity(Intent(this,WaterActivity::class.java))
             R.id.nav_bmi -> startActivity(Intent(this,BmiCalc::class.java))
+            R.id.nav_workout -> startActivity(Intent(this,Workout::class.java))
+            R.id.nav_diet -> Toast.makeText(this,"Diet Page (TODO)",Toast.LENGTH_SHORT).show()
+            R.id.nav_logout -> Toast.makeText(this,"Logout (TODO)",Toast.LENGTH_SHORT).show()
         }
         val drawer : DrawerLayout = findViewById(R.id.my_drawer_layout)
         drawer.closeDrawer(GravityCompat.START)

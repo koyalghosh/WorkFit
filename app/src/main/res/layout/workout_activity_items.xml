@@ -19,7 +19,7 @@
                 android:id="@+id/text"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Cardio"
+                android:text="@string/cardio"
                 android:gravity="start"
                 android:layout_weight="3"
                 android:fontFamily="monospace"

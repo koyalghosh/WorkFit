@@ -41,7 +41,7 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_gravity="left"
-            android:src="@drawable/water_drop"></ImageView>
+            android:src="@drawable/water_drop" />
 
         <TextView
             android:id="@+id/drink_water_text"
@@ -56,7 +56,7 @@
             android:paddingEnd="0dp"
             android:text="Let's Drink Some Water!"
             android:textSize="19dp"
-            android:textStyle="bold|italic"></TextView>
+            android:textStyle="bold|italic" />
 
     </FrameLayout>
 
@@ -124,7 +124,8 @@
 
             <com.airbnb.lottie.LottieAnimationView
                 android:id="@+id/glass1"
-                android:layout_width="80dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:layout_height="100dp"
                 app:lottie_autoPlay="false"
                 app:lottie_loop="false"
@@ -133,7 +134,8 @@
                 />
             <com.airbnb.lottie.LottieAnimationView
                 android:id="@+id/glass2"
-                android:layout_width="80dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:layout_height="100dp"
                 app:lottie_autoPlay="false"
                 app:lottie_loop="false"
@@ -142,7 +144,8 @@
             />
             <com.airbnb.lottie.LottieAnimationView
             android:id="@+id/glass3"
-            android:layout_width="80dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
             android:layout_height="100dp"
             app:lottie_autoPlay="false"
             app:lottie_loop="false"
@@ -151,7 +154,8 @@
             />
             <com.airbnb.lottie.LottieAnimationView
             android:id="@+id/glass4"
-            android:layout_width="80dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
             android:layout_height="100dp"
             app:lottie_autoPlay="false"
             app:lottie_loop="false"
@@ -160,7 +164,8 @@
             />
             <com.airbnb.lottie.LottieAnimationView
             android:id="@+id/glass5"
-            android:layout_width="80dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
             android:layout_height="100dp"
             app:lottie_autoPlay="false"
             app:lottie_loop="false"
@@ -177,7 +182,8 @@
 
         <com.airbnb.lottie.LottieAnimationView
             android:id="@+id/glass6"
-            android:layout_width="80dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="100dp"
             app:lottie_autoPlay="false"
             app:lottie_loop="false"
@@ -185,7 +191,8 @@
             />
         <com.airbnb.lottie.LottieAnimationView
             android:id="@+id/glass7"
-            android:layout_width="80dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="100dp"
             app:lottie_autoPlay="false"
             app:lottie_loop="false"
@@ -193,7 +200,8 @@
             />
         <com.airbnb.lottie.LottieAnimationView
             android:id="@+id/glass8"
-            android:layout_width="80dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="100dp"
             app:lottie_autoPlay="false"
             app:lottie_loop="false"
@@ -201,7 +209,8 @@
             />
         <com.airbnb.lottie.LottieAnimationView
             android:id="@+id/glass9"
-            android:layout_width="80dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="100dp"
             app:lottie_autoPlay="false"
             app:lottie_loop="false"
@@ -209,7 +218,8 @@
             />
         <com.airbnb.lottie.LottieAnimationView
             android:id="@+id/glass10"
-            android:layout_width="80dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="100dp"
             app:lottie_autoPlay="false"
             app:lottie_loop="false"
