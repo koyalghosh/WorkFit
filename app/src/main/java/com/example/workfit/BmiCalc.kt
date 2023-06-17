@@ -51,9 +51,10 @@ class BmiCalc : AppCompatActivity() {
                 //feet-inch to m
                 height = etCm?.text.toString().toFloat()
                 var inch = etInch?.text.toString().toFloat()
+                weight = etKg?.text.toString().toFloat()
+
                 var temp = (height*30.48f) + (inch * 2.54f)
                 temp /= 100
-                weight = etKg?.text.toString().toFloat()
                 weight *= 0.454f
                 bmi = weight/(temp*temp)
 
