@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:gravity="center|top"
+    android:orientation="vertical"
+    android:background="#DEEBF7">
+
+    <ImageView
+        android:layout_width="127dp"
+        android:layout_height="34dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10sp"
+        android:src="@drawable/logoandname" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:padding="5sp"
+        android:fontFamily="monospace"
+        android:text="Water Tracker"
+        android:textColor="@color/heading_color"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:background="@drawable/rounded_corner"
+        android:backgroundTint="#3CDFFF"/>
+
+    <LinearLayout
+        android:layout_width="400dp"
+        android:layout_height="100dp"
+        android:layout_margin="20dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/water_drop"
+            android:layout_width="101dp"
+            android:layout_height="100dp"
+            android:src="@drawable/water_drop"></ImageView>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/drink_water_text"
+            android:layout_width="284dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/rounded_corner"
+            android:backgroundTint="#DEEBF7"
+            android:fontFamily="monospace"
+            android:gravity="center|left"
+            android:paddingStart="0dp"
+            android:paddingEnd="0dp"
+            android:text="Stay hydrated and let your inner brilliance flow."
+            android:textSize="19dp"
+            android:textStyle="bold|italic" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="200sp"
+        android:layout_height="200sp"
+        android:id="@+id/flStart"
+        android:layout_gravity="center"
+        android:background="@drawable/item_oval_ripple"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <ImageView
+                android:id="@+id/icon"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:src="@drawable/water"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/tvDrinkwater"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/icon"
+                android:layout_centerHorizontal="true"
+                android:text="Daily drink target"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/tvDrinkwater"
+                android:layout_marginBottom="10dp"
+                android:layout_centerHorizontal="true"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:text="0/10 Glass" />
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/glass1"
+                android:layout_width="80dp"
+                android:layout_height="100dp"
+                app:lottie_autoPlay="false"
+                app:lottie_loop="false"
+                app:lottie_rawRes="@raw/water_button_animation"
+
+                />
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/glass2"
+                android:layout_width="80dp"
+                android:layout_height="100dp"
+                app:lottie_autoPlay="false"
+                app:lottie_loop="false"
+                app:lottie_rawRes="@raw/water_button_animation"
+
+            />
+            <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/glass3"
+            android:layout_width="80dp"
+            android:layout_height="100dp"
+            app:lottie_autoPlay="false"
+            app:lottie_loop="false"
+            app:lottie_rawRes="@raw/water_button_animation"
+
+            />
+            <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/glass4"
+            android:layout_width="80dp"
+            android:layout_height="100dp"
+            app:lottie_autoPlay="false"
+            app:lottie_loop="false"
+            app:lottie_rawRes="@raw/water_button_animation"
+
+            />
+            <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/glass5"
+            android:layout_width="80dp"
+            android:layout_height="100dp"
+            app:lottie_autoPlay="false"
+            app:lottie_loop="false"
+            app:lottie_rawRes="@raw/water_button_animation"
+
+            />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/glass6"
+            android:layout_width="80dp"
+            android:layout_height="100dp"
+            app:lottie_autoPlay="false"
+            app:lottie_loop="false"
+            app:lottie_rawRes="@raw/water_button_animation"
+            />
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/glass7"
+            android:layout_width="80dp"
+            android:layout_height="100dp"
+            app:lottie_autoPlay="false"
+            app:lottie_loop="false"
+            app:lottie_rawRes="@raw/water_button_animation"
+            />
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/glass8"
+            android:layout_width="80dp"
+            android:layout_height="100dp"
+            app:lottie_autoPlay="false"
+            app:lottie_loop="false"
+            app:lottie_rawRes="@raw/water_button_animation"
+            />
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/glass9"
+            android:layout_width="80dp"
+            android:layout_height="100dp"
+            app:lottie_autoPlay="false"
+            app:lottie_loop="false"
+            app:lottie_rawRes="@raw/water_button_animation"
+            />
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/glass10"
+            android:layout_width="80dp"
+            android:layout_height="100dp"
+            app:lottie_autoPlay="false"
+            app:lottie_loop="false"
+            app:lottie_rawRes="@raw/water_button_animation"
+            />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>
