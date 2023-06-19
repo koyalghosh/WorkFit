@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Cardio">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/cardioExName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Squats"
+        android:textStyle="bold"
+        android:textColor="#0784B5"
+        android:layout_margin="5sp"
+        android:background="@drawable/rounded_corner"
+        android:fontFamily="monospace"
+        android:paddingStart="5dp"
+        android:paddingTop="5dp"
+        android:paddingEnd="5dp"
+        android:paddingBottom="5dp"
+        android:textSize="14sp"
+        android:layout_gravity="center"/>
+
+    <VideoView
+        android:id="@+id/cardioVideo"
+        android:layout_width="400dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:src ="@raw/squats"
+        />
+
+
+
+    <FrameLayout
+        android:id="@+id/flTimer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="240dp"
+            android:layout_height="240dp"
+            android:indeterminate="false"
+            android:max="40000"
+            android:progress="40000"
+            android:layout_gravity="center"
+            android:background="@drawable/gray_progressbar_background"
+            android:progressDrawable="@drawable/blue_progressbar_background" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/timeRemainingTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:textColor="#000000"
+                android:text="Time Remaining"
+                android:layout_centerInParent="true" />
+
+            <TextView
+                android:id="@+id/timeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:textColor="#000000"
+                android:text="00:40"
+                android:layout_below="@+id/timeRemainingTextView"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp" />
+        </RelativeLayout>
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/progressBar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="Start"
+        android:layout_gravity="center"/>
+
+</LinearLayout>
