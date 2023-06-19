@@ -104,7 +104,3 @@ class Cardio : AppCompatActivity() {
         cardioExName.text = exerciseNames[currentVideoIndex]
     }
     }
-
-
-
-

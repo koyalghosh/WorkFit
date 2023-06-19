@@ -23,9 +23,9 @@ class BMIresult : AppCompatActivity() {
 
         if(receivedValue?.toFloat()!! < 18.0f){
             imgBMI?.setImageResource(R.drawable.underweight_bmi)
-        }else if(receivedValue?.toFloat()!! < 24.9f){
+        }else if(receivedValue?.toFloat()!! <= 24.9f){
             imgBMI?.setImageResource(R.drawable.normal_bmi)
-        }else if(receivedValue?.toFloat()!! < 29.9f){
+        }else if(receivedValue?.toFloat()!! <= 29.9f){
             imgBMI?.setImageResource(R.drawable.overweight_bmi)
         }else{
             imgBMI?.setImageResource(R.drawable.obesity_bmi)

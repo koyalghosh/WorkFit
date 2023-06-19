@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <style name="Base.Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:windowFullscreen" />
+    </style>
     <style name="SpinnerTextAppearance" parent="TextAppearance.AppCompat.Widget.DropDownItem">
         <item name="android:textSize">20sp</item>
+        <item name="android:windowFullscreen" />
     </style>
     <style name="CustomSwitchStyle" parent="Widget.AppCompat.CompoundButton.Switch">
         <item name="android:thumb">@drawable/custom_switch_thumb</item>
         <item name="android:track">@drawable/custom_switch_track</item>
+        <item name="android:windowFullscreen" />
     </style>
 
 </resources>
