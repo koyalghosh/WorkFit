@@ -8,43 +8,61 @@
     tools:context=".BmiCalc"
     android:gravity="center|top"
     android:orientation="vertical"
-    android:background="#FBE5D8"
+    android:background="@drawable/bmi_gradient"
     android:fitsSystemWindows="true"
     >
 
     <ImageView
+        android:layout_width="127dp"
+        android:layout_height="34dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10sp"
+        android:src="@drawable/logo_name" />
+
+    <TextView
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_weight="2"
-        android:layout_marginTop="10dp"
-        android:src="@drawable/stand_girl"
-        android:layout_marginBottom="10dp"
-        android:contentDescription="@string/todo" />
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_corner"
+        android:textStyle="bold"
+        android:text="BMI Calculator"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="monospace"
+        android:textSize="20sp">
+    </TextView>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="300dp"
+        android:layout_height="330dp"
+        app:lottie_rawRes="@raw/bmi_animation"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        android:layout_marginBottom="20dp"
+        android:layout_weight="0.4">
+    </com.airbnb.lottie.LottieAnimationView>
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_weight="0.15"
-        android:backgroundTint="#3CDFFF"
-        android:layout_marginTop="10sp"
-        android:layout_marginBottom="30sp"
+        android:layout_marginBottom="20sp"
         android:layout_marginRight="20sp"
         android:layout_marginLeft="20sp"
+        app:cardCornerRadius="5dp"
         >
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="2sp"
+            android:layout_height="match_parent"
             android:orientation="horizontal"
             android:gravity="center"
-            android:background="@color/button_color"
+            android:background="@drawable/rounded_corner"
             >
 
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="cm/kg"
+                android:layout_weight="0.3"
                 android:paddingStart="10dp"
                 android:paddingEnd="10dp"
                 android:fontFamily="monospace"
@@ -57,6 +75,8 @@
                 android:id="@+id/switchButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:layout_gravity="center"
                 android:checked="false"
                 android:textSize="20sp"
                 android:paddingStart="5dp"
@@ -68,6 +88,7 @@
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_weight="0.3"
                 android:text="ft/lbs"
                 android:paddingEnd="10dp"
                 android:paddingStart="10dp"
@@ -85,16 +106,14 @@
         android:layout_height="0dp"
         android:layout_weight="0.25"
         android:backgroundTint="@color/background_text_color"
-        android:layout_marginTop="10sp"
-        android:layout_marginBottom="10sp"
+        android:layout_marginBottom="20sp"
         android:layout_marginRight="20sp"
         android:layout_marginLeft="20sp"
         app:cardCornerRadius="25dp">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="2sp"
+            android:layout_height="match_parent"
             android:orientation="horizontal">
 
             <com.google.android.material.textview.MaterialTextView
@@ -102,6 +121,7 @@
                 android:layout_height="wrap_content"
                 android:paddingStart="10dp"
                 android:paddingEnd="10dp"
+                android:layout_gravity="center"
                 android:text="Height"
                 android:fontFamily="monospace"
                 android:textColor="@color/font_color"
@@ -113,6 +133,7 @@
                 android:id="@+id/txtCm"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:layout_marginLeft="25dp"
                 android:layout_marginRight="5dp"
                 android:backgroundTint="#D8F9FF"
@@ -121,12 +142,13 @@
                 android:textColorHint="@color/font_color"
                 android:textColor="@color/font_color"
                 android:textSize="20sp"
-                android:visibility="visible" />
+                android:visibility="visible"/>
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/cm"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:layout_marginLeft="5sp"
                 android:text="cm"
                 android:fontFamily="monospace"
@@ -139,6 +161,7 @@
                 android:layout_height="wrap_content"
                 android:paddingEnd="10dp"
                 android:hint="0"
+                android:layout_gravity="center"
                 android:textColorHint="@color/font_color"
                 android:backgroundTint="#D8F9FF"
                 android:layout_marginLeft="15sp"
@@ -149,6 +172,7 @@
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:id="@+id/inch"
                 android:visibility="invisible"
                 android:text="inch"
@@ -165,21 +189,20 @@
         android:layout_height="0dp"
         android:layout_weight="0.25"
         android:backgroundTint="@color/background_text_color"
-        android:layout_marginTop="10sp"
-        android:layout_marginBottom="10sp"
+        android:layout_marginBottom="20sp"
         android:layout_marginRight="20sp"
         android:layout_marginLeft="20sp"
         app:cardCornerRadius="25dp">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="2sp"
+            android:layout_height="match_parent"
             android:orientation="horizontal">
 
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:fontFamily="monospace"
                 android:text="Weight"
                 android:paddingStart="10dp"
@@ -193,6 +216,7 @@
                 android:id="@+id/txtKg"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:layout_marginLeft="25dp"
                 android:layout_marginRight="5dp"
                 android:backgroundTint="#D8F9FF"
@@ -206,6 +230,7 @@
                 android:id="@+id/kg"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:layout_marginLeft="5sp"
                 android:fontFamily="monospace"
                 android:text="kg"
@@ -220,9 +245,10 @@
         android:layout_height="0dp"
         android:layout_weight="0.25"
         android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"
         android:paddingStart="0dp"
         android:paddingEnd="0dp"
-        android:layout_marginTop="20dp"
         android:backgroundTint="@color/button_color"
         android:text="View Result"
         android:fontFamily="monospace"

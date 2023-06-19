@@ -7,7 +7,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainMenu"
-    tools:ignore="HardcodedText">
+    tools:ignore="HardcodedText"
+    android:background="@drawable/main_menu_gradient">
 
 
 
@@ -31,15 +32,15 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:layout_margin="5sp"
-            android:background="@drawable/rounded_corner"
+            android:background="@drawable/quote_gradient"
             android:fontFamily="monospace"
-            android:paddingStart="5dp"
+            android:paddingStart="8dp"
             android:paddingTop="5dp"
-            android:paddingEnd="5dp"
+            android:paddingEnd="8dp"
             android:paddingBottom="5dp"
             android:text="@string/i_hated_every_minute_of_training_but_i_said_don_t_quit_suffer_now_and_live_the_rest_of_your_life_as_a_champion_n_muhammad_ali"
             android:textColor="#0784B5"
-            android:textSize="14sp"
+            android:textSize="16sp"
             android:textStyle="bold" />
 
         <LinearLayout

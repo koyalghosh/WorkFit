@@ -5,26 +5,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:layout_margin="10sp"
+    android:background="@drawable/main_menu_gradient"
     tools:context=".SignUp"
     android:fitsSystemWindows="true"
     >
+
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_gravity="center"
-        android:src="@drawable/logo_name"
-        android:layout_weight="0.4"/>
-    <com.google.android.material.textview.MaterialTextView
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_weight="2.4"
-        android:text="@string/sign_up"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:layout_gravity="center_horizontal"
-        android:gravity="center"/>
+        android:layout_height="250dp"
+        android:src="@drawable/logo_2">
+    </ImageView>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:src="@drawable/name"
+        android:layout_marginBottom="20dp">
+    </ImageView>
+
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/text1"
@@ -147,6 +144,7 @@
         android:backgroundTint="@color/button_color"
         android:fontFamily="monospace"
         android:text="@string/sign_up"
+        android:layout_marginBottom="20dp"
         android:gravity="center"/>
 
 </LinearLayout>

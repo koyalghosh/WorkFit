@@ -5,9 +5,7 @@
     android:id="@+id/linearLayout2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#CAE9F5"
-    android:gravity="center"
-    android:paddingTop="4dp"
+    android:background="@drawable/main_menu_gradient"
     tools:context=".MainActivity"
     android:orientation="vertical">
 
@@ -66,7 +64,6 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:layout_marginStart="51dp"
-        android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"
         android:layout_marginEnd="51dp"
         android:hint="@string/enter_password"
@@ -88,20 +85,24 @@
             app:startIconDrawable="@drawable/man_icon" />
     </com.google.android.material.textfield.TextInputLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
         android:id="@+id/login"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_height="50dp"
         android:layout_marginTop="15dp"
         android:layout_marginBottom="15dp"
         android:backgroundTint="@color/button_color"
         android:fontFamily="monospace"
-        android:gravity="center"
         android:text="@string/login"
+        android:layout_gravity="center"
+        android:gravity="center"
         android:textColor="@color/font_color"
-        android:textStyle="bold"/>
-
+        android:textStyle="bold" />
+    </LinearLayout>
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"

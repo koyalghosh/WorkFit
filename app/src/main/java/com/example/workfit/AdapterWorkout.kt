@@ -51,5 +51,3 @@ class AdapterWorkout(private val workoutItemList: List<WorkoutItem>) :
     }
 
 }
-
-

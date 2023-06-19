@@ -8,7 +8,7 @@
     tools:context=".MainActivity"
     android:gravity="center|top"
     android:orientation="vertical"
-    android:background="#DEEBF7">
+    android:background="@drawable/water_gradient">
 
     <ImageView
         android:layout_width="127dp"
@@ -48,8 +48,7 @@
             android:id="@+id/drink_water_text"
             android:layout_width="284dp"
             android:layout_height="match_parent"
-            android:background="@drawable/rounded_corner"
-            android:backgroundTint="#DEEBF7"
+            android:background="@drawable/quote_gradient"
             android:fontFamily="monospace"
             android:gravity="center|left"
             android:paddingStart="0dp"
@@ -75,31 +74,29 @@
 
             <ImageView
                 android:id="@+id/icon"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
+                android:layout_width="58dp"
+                android:layout_height="58dp"
                 android:layout_centerHorizontal="true"
                 android:layout_alignParentBottom="true"
                 android:src="@drawable/water"
                 android:scaleType="centerCrop" />
 
-            <TextView
-                android:id="@+id/tvDrinkwater"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            <com.airbnb.lottie.LottieAnimationView
+                android:layout_width="280dp"
+                android:layout_height="280dp"
+                app:lottie_loop="true"
+                app:lottie_autoPlay="true"
+                app:lottie_rawRes="@raw/hand_tap"
                 android:layout_above="@id/icon"
-                android:layout_centerHorizontal="true"
-                android:text="Daily drink target"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="14sp"
-                android:textStyle="bold" />
+                android:layout_centerHorizontal="true"/>
 
             <TextView
                 android:id="@+id/tvCount"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_above="@id/tvDrinkwater"
-                android:layout_marginBottom="10dp"
+                android:layout_above="@id/icon"
+                android:layout_marginBottom="20dp"
+                android:layout_centerVertical="true"
                 android:layout_centerHorizontal="true"
                 android:textSize="30sp"
                 android:textStyle="bold"
